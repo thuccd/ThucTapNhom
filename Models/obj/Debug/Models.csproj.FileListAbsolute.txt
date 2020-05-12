@@ -1,0 +1,12 @@
+G:\Visual stdio\CAFE_VIP\Models\bin\Debug\Models.dll.config
+G:\Visual stdio\CAFE_VIP\Models\bin\Debug\Models.dll
+G:\Visual stdio\CAFE_VIP\Models\bin\Debug\Models.pdb
+G:\Visual stdio\CAFE_VIP\Models\bin\Debug\EntityFramework.dll
+G:\Visual stdio\CAFE_VIP\Models\bin\Debug\EntityFramework.SqlServer.dll
+G:\Visual stdio\CAFE_VIP\Models\bin\Debug\EntityFramework.xml
+G:\Visual stdio\CAFE_VIP\Models\bin\Debug\EntityFramework.SqlServer.xml
+G:\Visual stdio\CAFE_VIP\Models\obj\Debug\Models.csprojAssemblyReference.cache
+G:\Visual stdio\CAFE_VIP\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+G:\Visual stdio\CAFE_VIP\Models\obj\Debug\Models.csproj.CopyComplete
+G:\Visual stdio\CAFE_VIP\Models\obj\Debug\Models.dll
+G:\Visual stdio\CAFE_VIP\Models\obj\Debug\Models.pdb

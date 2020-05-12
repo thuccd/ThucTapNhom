@@ -1,0 +1,82 @@
+﻿
+@model CAFE_VIP.Models.LoginModels
+
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <title>Login</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="stylesheet" href="~/Content/Login/css/style.css" type="text/css" media="all">
+    <!-- onlinefonts -->
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+
+    <!-- //Custom-Stylesheet-Links -->
+</head>
+
+<body>
+    <header>
+        <h1 class="title-agile text-center">Love cafe!!!</h1>
+    </header>
+    <!-- //header -->
+    <section class="login-wrap">
+       
+        <div class="main_w3agile">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+            <label for="tab-1" class="tab">@Html.ActionLink("Sign-In", "Index", "Login", null, new { @class = "click" })</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up" >
+            <label for="tab-2" class="tab">@Html.ActionLink("Sign-Up", "SignUp", "Login", null, new { @class = "click" })</label>
+            <div class="login-form">
+                @RenderBody();
+                <!-- signin form -->
+                <!-- //signin form -->
+                <!-- signup form -->
+                <!-- //signup form -->
+            </div>
+        </div>
+    </section>
+    <!-- //section -->
+    <footer>
+        <div class="copy-wthree text-center">
+            <p>
+                Xin chào mọi người đã đến với cửa hàng cafe của chúng tôi
+                <a href="http://w3layouts.com">CAFE VIP</a>
+            </p>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <!-- script for password match -->
+    <script>
+        window.onload = function () {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
+
+        function validatePassword() {
+            var pass2 = document.getElementById("password2").value;
+            var pass1 = document.getElementById("password1").value;
+            if (pass1 != pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');
+            //empty string means no validation error
+        }
+    </script>
+    <!-- script for password match -->
+</body>
+<!-- //Body -->
+
+</html>

@@ -1,0 +1,230 @@
+﻿@model Models.EF.CATEGORY
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+    <div class="content">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <a href="addsp.html"><img src="~/Content/images/add.png"></a>
+                            </div>
+                            <div class="col-6 col-md-12 add">
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="add">
+                            @Html.ActionLink(" ADD CATELOGY", "Create", "Catelogy", null, new { @class = "click" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <img src="~/Content/images/burger-2.jpg">
+                            </div>
+                            <div class="col-6 col-md-8 value">
+                                <p class="card-text">Hamburger</p>
+                            </div>
+                            <div class="col-6 col-md-4 ">
+                                <p class="gia">1000$</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="row">
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary" style="width: 100%;">Edit</button>
+                            </a>
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <img src="~/Content/images/burger-1.jpg">
+                            </div>
+                            <div class="col-6 col-md-8 value">
+                                <p class="card-text">Hamburger</p>
+                            </div>
+                            <div class="col-6 col-md-4 ">
+                                <p class="gia">1000$</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="row">
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary" style="width: 100%;">Edit</button>
+                            </a>
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <img src="~/Content/images/burger-1.jpg">
+                            </div>
+                            <div class="col-6 col-md-8 value">
+                                <p class="card-text">Hamburger</p>
+                            </div>
+                            <div class="col-6 col-md-4 ">
+                                <p class="gia">1000$</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="row">
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary" style="width: 100%;">Edit</button>
+                            </a>
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <img src="~/Content/images/burger-1.jpg">
+                            </div>
+                            <div class="col-6 col-md-8 value">
+                                <p class="card-text">Hamburger</p>
+                            </div>
+                            <div class="col-6 col-md-4 ">
+                                <p class="gia">1000$</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="row">
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary" style="width: 100%;">Edit</button>
+                            </a>
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <img src="~/Content/images/burger-1.jpg">
+                            </div>
+                            <div class="col-6 col-md-8 value">
+                                <p class="card-text">Hamburger</p>
+                            </div>
+                            <div class="col-6 col-md-4 ">
+                                <p class="gia">1000$</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="row">
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary" style="width: 100%;">Edit</button>
+                            </a>
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <img src="~/Content/images/burger-1.jpg">
+                            </div>
+                            <div class="col-6 col-md-8 value">
+                                <p class="card-text">Hamburger</p>
+                            </div>
+                            <div class="col-6 col-md-4 ">
+                                <p class="gia">1000$</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="row">
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary" style="width: 100%;">Edit</button>
+                            </a>
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <img src="~/Content/images/burger-1.jpg">
+                            </div>
+                            <div class="col-6 col-md-8 value">
+                                <p class="card-text">Hamburger</p>
+                            </div>
+                            <div class="col-6 col-md-4 ">
+                                <p class="gia">1000$</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="row">
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary" style="width: 100%;">Edit</button>
+                            </a>
+                            <a class="col-md-6">
+                                <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

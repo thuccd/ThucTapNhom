@@ -1,0 +1,156 @@
+﻿@model Models.EF.PERSON
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+
+<div class="card-header">
+    <h5 class="card-title">Are you delete this?</h5>
+</div>
+<div class="card-body">
+    <form>
+
+        <div class="row">
+            <div class="col-md-10 ">
+                <div class="form-group">
+                    <label>@Html.DisplayNameFor(model => model.Personusername)</label>
+                    <br />
+                    <label>@Html.DisplayFor(model => model.Personusername)</label>
+
+
+                </div>
+            </div>
+            <div class="col-md-10 ">
+                <div class="form-group">
+                    <label>  @Html.DisplayNameFor(model => model.PersonPassword)</label>
+                    <br />
+                    <label>@Html.DisplayFor(model => model.PersonPassword)</label>
+
+                </div>
+            </div>
+        </div>
+
+        @*<dt>
+                @Html.DisplayNameFor(model => model.Personusername)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Personusername)
+            </dd>*@
+
+        @*<dt>
+                @Html.DisplayNameFor(model => model.PersonPassword)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PersonPassword)
+            </dd>*@
+        <div class="row">
+            <div class="col-md-10 ">
+                <div class="form-group">
+                    <label> @Html.DisplayNameFor(model => model.PersonEmail)</label>
+                    <br />
+                    <label> @Html.DisplayFor(model => model.PersonEmail)</label>
+
+
+                </div>
+            </div>
+            <div class="col-md-10 ">
+                <div class="form-group">
+                    <label>   @Html.DisplayNameFor(model => model.PersonName)</label>
+                    <br />
+                    <label> @Html.DisplayFor(model => model.PersonName)</label>
+
+                </div>
+            </div>
+        </div>
+        @*<dt>
+                @Html.DisplayNameFor(model => model.PersonEmail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PersonEmail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PersonName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PersonName)
+            </dd>*@
+
+        <div class="row">
+            <div class="col-md-10 ">
+                <div class="form-group">
+                    <label> @Html.DisplayNameFor(model => model.PersonPhone)</label>
+                    <br />
+                    <label>  @Html.DisplayFor(model => model.PersonPhone)</label>
+
+
+                </div>
+            </div>
+            <div class="col-md-10 ">
+                <div class="form-group">
+                    <label>  @Html.DisplayNameFor(model => model.PersonAdress)</label>
+                    <br />
+                    <label> @Html.DisplayFor(model => model.PersonAdress)</label>
+
+                </div>
+            </div>
+        </div>
+        @*<dt>
+                @Html.DisplayNameFor(model => model.PersonPhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PersonPhone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PersonAdress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PersonAdress)
+            </dd>*@
+        <div class="row">
+            <div class="col-md-10 ">
+                <div class="form-group">
+                    <label> @Html.DisplayNameFor(model => model.CreatedDate)</label>
+                    <br />
+                    <label>  @Html.DisplayFor(model => model.CreatedDate)</label>
+
+
+                </div>
+            </div>
+
+        </div>
+        @*<dt>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreatedDate)
+            </dd>*@
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <button type="submit" class="btn btn-warning">Delete</button>
+            @*<input type="submit" value="Delete" class="btn btn-default" /> |*@
+            <button type="button" class="btn btn-outline-success">@Html.ActionLink("Back to List", "Index")</button>
+
+        </div>
+        }
+
+    </div>
+    </form>
+</div>

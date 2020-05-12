@@ -1,0 +1,70 @@
+﻿@model Models.EF.RESOURCE
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+
+<div class="card-header">
+    <h5 class="card-title">Are you delete this?</h5>
+</div>
+<div>
+
+    <div class="card-body">
+        <form>
+
+            <div class="row">
+                <div class="col-md-10 ">
+                    <div class="form-group">
+                        <label> @Html.DisplayNameFor(model => model.Resourcesname)</label>
+
+                        <br />
+
+                        <label>@Html.DisplayFor(model => model.Resourcesname)</label>
+                        
+                       
+
+
+                    </div>
+                </div>
+                <div class="col-md-10 ">
+                    <div class="form-group">
+                        <label> @Html.DisplayNameFor(model => model.Quantity)</label>
+                        <br />
+                        <label>  @Html.DisplayFor(model => model.Quantity)</label>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 ">
+                    <div class="form-group">
+                        <label>@Html.DisplayNameFor(model => model.Total)</label>
+                        <br />
+                        <label>@Html.DisplayFor(model => model.Total)</label>
+
+
+                    </div>
+
+                </div>
+            </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <button type="submit" class="btn btn-warning">Delete</button>
+                    <button type="button" class="btn btn-outline-success" >@Html.ActionLink("Back to List", "Index")</button>
+                    
+                </div>
+            }
+        </form>
+    </div>
+    
+
+   
+</div>

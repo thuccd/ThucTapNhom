@@ -1,0 +1,63 @@
+﻿@model Models.EF.USER
+
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+
+
+    
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="group">
+        @Html.LabelFor(model => model.UserUsername, htmlAttributes: new { @class = "label" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.UserUsername, new { htmlAttributes = new { @class = "input" } })
+            @Html.ValidationMessageFor(model => model.UserUsername, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="group">
+        @Html.LabelFor(model => model.UserPassword, htmlAttributes: new { @class = "label" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.UserPassword, new { htmlAttributes = new { @class = "input" } })
+            @Html.ValidationMessageFor(model => model.UserPassword, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="group">
+        @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "label" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "input" } })
+            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="group">
+        @Html.LabelFor(model => model.CreatedDate, htmlAttributes: new { @class = "label" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CreatedDate, new { htmlAttributes = new { @class = "input" } })
+            @Html.ValidationMessageFor(model => model.CreatedDate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="group">
+        <input type="submit" class="button" value="Sign Up">
+    </div>
+    <div class="hr"></div>
+    <div class="foot-lnk">
+        <label for="tab-1">Already Member? </label>
+    </div>
+
+}
+
+<div>
+    @Html.ActionLink("Back to Login", "Index", new { @class = "label" })
+</div>

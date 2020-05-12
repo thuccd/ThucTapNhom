@@ -1,0 +1,136 @@
+﻿@model IEnumerable<Models.EF.PERSON>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="card-header">
+    <a class="addnv card-title ">@Html.ActionLink("Add Employees", "Create")</a>
+</div>
+@*@using (Html.BeginForm("Index", "People", FormMethod.Get))
+    {
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-md-4">
+                    <input type="text" name="searching" />
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary btn-round">Search</button>
+                </div>
+            </div>
+        </div>
+    }*@
+@using (Html.BeginForm())
+{
+    <nav class="navbar navbar-expand-lg navbar-dark blue lighten-2 mb-4">
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <form class="form-inline mr-auto">
+                @Html.TextBox("searching")
+                
+                <button type="submit" class="btn btn-primary btn-success btn-sm">Search</button>
+            </form>
+
+        </div>
+        <!-- Collapsible content -->
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">Navbar</a>
+
+    </nav>
+    @*<p>
+        Search by Name @Html.TextBox("searching",new { @class = "form-control" }) 
+    </p>*@
+}
+
+<div class="card-body">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class=" text-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.Personusername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonAdress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                EDIT
+            </th>
+            <th>
+                DELETE
+            </th>
+            <th>
+                DETAILS
+            </th>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Personusername)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PersonPassword)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PersonEmail)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PersonName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PersonPhone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PersonAdress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedDate)
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-primary sel">@Html.ActionLink("Edit", "Edit", new { id = item.PersonID }) </button>
+
+
+                            @*@Html.ActionLink("Edit", "Edit", new { id = item.PersonID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.PersonID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.PersonID })*@
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-primary sel">@Html.ActionLink("Delete", "Delete", new { id = item.PersonID })</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-primary sel">@Html.ActionLink("Details", "Details", new { id = item.PersonID }) </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+

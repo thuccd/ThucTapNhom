@@ -1,0 +1,82 @@
+﻿@*@model Models.EF.PRODUCT*@
+  @using CAFE_VIP.Models;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@*@Html.ActionLink(" Add product", "Create", "Product", null, new { @class = "click" })*@
+
+
+
+
+    
+    <div class="content">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <a href="addsp.html"><img src="@Url.Content("~/HinhAnhSP/")"></a>
+                            </div>
+                            <div class="col-6 col-md-12 add">
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="add">
+                            Thêm sản phẩm
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                
+                    @using (Html.BeginForm("Index", "Product", FormMethod.Get))
+                     {
+                        foreach (var item in Model)
+                        {
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-body ">
+                                    <div class="row">
+                                        <div class="col-12 col-md-12">
+                                            <img src="@Url.Content("~/Content/images/" + item.ShowImage)">
+                                        </div>
+                                        <div class="col-6 col-md-8 value">
+                                            <p class="card-text">@item.ProductName</p>
+                                        </div>
+                                        <div class="col-6 col-md-4 ">
+                                            <p class="gia">@item.ProductPrice</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="card-footer ">
+                                    <div class="row">
+                                        <a class="col-md-6">
+                                            <button class="btn btn-sm btn-outline-secondary" style="width: 100%;">Edit</button>
+                                        </a>
+                                        <a class="col-md-6">
+                                            <button class="btn btn-sm btn-outline-secondary">Delete</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        }
+
+                     }
+
+
+
+
+    </div>
+ 
+
+
+
+

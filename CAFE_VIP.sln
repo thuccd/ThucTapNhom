@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAFE_VIP", "CAFE_VIP\CAFE_VIP.csproj", "{FA33DFCA-D06C-4C1B-B089-AE056E7A63C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{4E1483B9-9EB6-42F1-8CD0-038C9CD4A700}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA33DFCA-D06C-4C1B-B089-AE056E7A63C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA33DFCA-D06C-4C1B-B089-AE056E7A63C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA33DFCA-D06C-4C1B-B089-AE056E7A63C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA33DFCA-D06C-4C1B-B089-AE056E7A63C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E1483B9-9EB6-42F1-8CD0-038C9CD4A700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E1483B9-9EB6-42F1-8CD0-038C9CD4A700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E1483B9-9EB6-42F1-8CD0-038C9CD4A700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E1483B9-9EB6-42F1-8CD0-038C9CD4A700}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5ACDBF6-77C6-46E5-BEE0-CD7C3E8C802E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Models.EF.RESOURCE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<br />
+<div class="card-header">
+    <a class="addnv card-title ">@Html.ActionLink("Add Resources", "Create")</a>
+</div>
+@using (Html.BeginForm())
+ { 
+    <nav class="navbar navbar-expand-lg navbar-dark blue lighten-2 mb-4">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <form class="form-inline mr-auto">
+                @Html.TextBox("searchingg")
+
+                <button type="submit" class="btn btn-primary btn-success btn-sm">Search</button>
+            </form>
+
+        </div>
+    </nav>
+ }
+<div class="card-body">
+    <div class="table-responsive">
+
+        <table class="table table-striped">
+            <thead class=" text-primary">
+
+            <th>
+                @Html.DisplayNameFor(model => model.Resourcesname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                EDIT
+            </th>
+            <th>
+                DELETE
+            </th>
+            <th>
+                DETAILS
+            </th>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Resourcesname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Total)
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-primary btn-sm">@Html.ActionLink("Edit", "Edit", new { id = item.ResourcesID }) </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-primary btn-sm">@Html.ActionLink("Details", "Details", new { id = item.ResourcesID })</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-primary btn-sm"> @Html.ActionLink("Delete", "Delete", new { id = item.ResourcesID }) </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
