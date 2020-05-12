@@ -10,3 +10,15 @@ G:\Visual stdio\CAFE_VIP\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 G:\Visual stdio\CAFE_VIP\Models\obj\Debug\Models.csproj.CopyComplete
 G:\Visual stdio\CAFE_VIP\Models\obj\Debug\Models.dll
 G:\Visual stdio\CAFE_VIP\Models\obj\Debug\Models.pdb
+C:\Users\ABC\Desktop\ThucTapNhom\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\ABC\Desktop\ThucTapNhom\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\ABC\Desktop\ThucTapNhom\Models\obj\Debug\Models.dll
+C:\Users\ABC\Desktop\ThucTapNhom\Models\obj\Debug\Models.pdb
+C:\Users\ABC\Desktop\ThucTapNhom\Models\bin\Debug\Models.dll.config
+C:\Users\ABC\Desktop\ThucTapNhom\Models\bin\Debug\Models.dll
+C:\Users\ABC\Desktop\ThucTapNhom\Models\bin\Debug\Models.pdb
+C:\Users\ABC\Desktop\ThucTapNhom\Models\bin\Debug\EntityFramework.dll
+C:\Users\ABC\Desktop\ThucTapNhom\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ABC\Desktop\ThucTapNhom\Models\bin\Debug\EntityFramework.xml
+C:\Users\ABC\Desktop\ThucTapNhom\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ABC\Desktop\ThucTapNhom\Models\obj\Debug\Models.csproj.CopyComplete

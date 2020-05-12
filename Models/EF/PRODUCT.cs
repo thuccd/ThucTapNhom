@@ -7,7 +7,7 @@ namespace Models.EF
     using System.Data.Entity.Spatial;
 
     [Table("PRODUCT")]
-    public partial  class PRODUCT
+    public partial class PRODUCT
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PRODUCT()
@@ -32,6 +32,9 @@ namespace Models.EF
         public string ShowImage { get; set; }
 
         public int? ProductStock { get; set; }
+
+        [StringLength(250)]
+        public string MetaKeyword { get; set; }
 
         public bool? ProductStatus { get; set; }
 

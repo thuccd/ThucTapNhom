@@ -1,82 +1,104 @@
-﻿@*@model Models.EF.PRODUCT*@
-  @using CAFE_VIP.Models;
+﻿
+
+
+<h2>Index</h2>
+
+@using Models.EF ;
+@model IEnumerable<PRODUCT>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    //khởi tao control webgrit
+    WebGrid grid = new WebGrid(source: Model, rowsPerPage: 5);
 }
-@*@Html.ActionLink(" Add product", "Create", "Product", null, new { @class = "click" })*@
+@Html.ActionLink("Thêm Sản Phẩm ", "TaoMoi", null, new { @class = "btn btn-success" })
+<br />
+<br />
+@* thể hiện dữ liệu thông qua webGrit *@
+@grid.GetHtml(
+    tableStyle: "Gridtable",  // class css cho thẻ table
+    headerStyle: "GridHead",    //class css cho các tiêu đề của table
+    footerStyle: "GridFooter",      //class cho phần phân trang phía dưới
+    rowStyle: "GridRow",                //class cho các row lẻ
+    alternatingRowStyle: "griAltRow",   // class cho các row chắn xen kẽ
+    columns: grid.Columns(
+    grid.Column("ProductID", "Mã Sản Phẩm "),
+    grid.Column("ProductName", "Tên Sản Phẩm"),
+    grid.Column("ProductDescription", "Mô tả ", format: p => @Html.Raw(p.ProductDescription)),
+    grid.Column("ShowImage", " Hình Ảnh ", format: p => @Html.Raw("<img src=\"../Content/HinhAnhSP/" + p.ShowImage + "\">")),
+    grid.Column(format: p => Html.ActionLink("CHỈNH SỬA", "ChinhSua", new { id = p.ProductID })),
+    grid.Column(format: p => Html.ActionLink("Xóa", "Xoa", new { id = p.ProductID }))
 
+))
+<style>
+    .Gridtable {
+        width: 80%;
+        height: 80%;
+        border: 5px solid green;
+        padding: 100px;
+    }
 
+    .GridHead td {
+        border: 1px solid #999999;
+        font-family: 'Segoe UI' 'Footlight MT';
+    }
 
+    .GridHead {
+        background-color: green;
+        border: 1px solid #999999;
+    }
 
-    
-    <div class="content">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card card-stats">
-                    <div class="card-body ">
-                        <div class="row">
-                            <div class="col-12 col-md-12">
-                                <a href="addsp.html"><img src="@Url.Content("~/HinhAnhSP/")"></a>
-                            </div>
-                            <div class="col-6 col-md-12 add">
-                                <p> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer ">
-                        <hr>
-                        <div class="add">
-                            Thêm sản phẩm
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-                
-                    @using (Html.BeginForm("Index", "Product", FormMethod.Get))
-                     {
-                        foreach (var item in Model)
-                        {
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                                <div class="card-body ">
-                                    <div class="row">
-                                        <div class="col-12 col-md-12">
-                                            <img src="@Url.Content("~/Content/images/" + item.ShowImage)">
-                                        </div>
-                                        <div class="col-6 col-md-8 value">
-                                            <p class="card-text">@item.ProductName</p>
-                                        </div>
-                                        <div class="col-6 col-md-4 ">
-                                            <p class="gia">@item.ProductPrice</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                </div>
-                                <div class="card-footer ">
-                                    <div class="row">
-                                        <a class="col-md-6">
-                                            <button class="btn btn-sm btn-outline-secondary" style="width: 100%;">Edit</button>
-                                        </a>
-                                        <a class="col-md-6">
-                                            <button class="btn btn-sm btn-outline-secondary">Delete</button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        }
+        .GridHead > th > a {
+            color: #fff;
+        }
 
-                     }
+    .GridFoodter {
+        font-weight: bold;
+        display: flex;
+    }
 
+    .header {
+        margin-top: 100px;
+        background-color: green;
+    }
 
+    .ShowImage {
+        width: 300px;
+        height: 300px;
+    }
 
+    .GridRow {
+        border: 1px solid green;
+    }
 
-    </div>
- 
+    .griAltRow {
+        border: 1px solid green;
+    }
 
+    .GridRow td img {
+        width: 200px;
+        height: 200px;
+    }
 
+    .griAltRow td img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .GridRow td a {
+        text-align: center;
+        color: orangered;
+        text-transform: uppercase;
+    }
+
+    .griAltRow td a {
+        text-align: center;
+        color: orangered;
+        text-transform: uppercase;
+    }
+
+    .GridRow td a :hover {
+    }
+</style>
 
 

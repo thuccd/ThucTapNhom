@@ -18,8 +18,7 @@ namespace Models.EF
         [Key]
         public int ResourcesID { get; set; }
 
-        [StringLength(250)]
-        public string Resourcesname { get; set; }
+        public DateTime? Resourcesname { get; set; }
 
         public int? Quantity { get; set; }
 

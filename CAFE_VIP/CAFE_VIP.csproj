@@ -133,7 +133,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
     <Compile Include="Areas\Admin\Controllers\PeopleController.cs" />
-    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PRODUCTController.cs" />
     <Compile Include="Areas\Admin\Controllers\RESOURCESController.cs" />
     <Compile Include="Common\CommonConstant.cs" />
     <Compile Include="Common\UserLogin.cs" />
@@ -181,11 +181,9 @@
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\HomeAdmin\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Catelogy\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Resource\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Catelogy\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Resource\Create.cshtml" />
     <Content Include="Areas\Admin\Views\CUSTOMERs\Create.cshtml" />
@@ -203,7 +201,10 @@
     <Content Include="Areas\Admin\Views\RESOURCES\Details.cshtml" />
     <Content Include="Areas\Admin\Views\RESOURCES\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\RESOURCES\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Product\Taomoi.cshtml" />
+    <Content Include="Areas\Admin\Views\PRODUCT\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\PRODUCT\ChinhSua.cshtml" />
+    <Content Include="Areas\Admin\Views\PRODUCT\TaoMoi.cshtml" />
+    <Content Include="Areas\Admin\Views\PRODUCT\Xoa.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -233,6 +234,7 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Content\css\NewFolder1\" />
+    <Folder Include="Content\HinhAnhSP\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>

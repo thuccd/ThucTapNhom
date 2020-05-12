@@ -1,7 +1,9 @@
-﻿@model Models.EF.PRODUCT
+﻿
+
+@model Models.EF.PRODUCT
 
 @{
-    ViewBag.Title = "TaoMoi";
+    ViewBag.Title = " Xóa Sản Phẩm ";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 @* sử dụng control date pickker để chạy ngày trên mọi nền tảng *@
@@ -10,23 +12,26 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script>
-            $( function() {
-                $("#datepicker").datepicker();
-      } );
+    $(function () {
+        $("#datepicker").datepicker();
+    });
 </script>
 @* xây dựng funtion để điều hướng dạng control date pikker *@
 
-<h2>Tạo mới Sản Phẩm </h2>
+<h2>Chỉnh Sửa Sản Phẩm </h2>
 @* bước 1 khi thêm hình ảnh  *@
 
-@using (Html.BeginForm("TaoMoi", "PRODUCT", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Xoa", "PRODUCT", FormMethod.Post, new { @enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-
+        <h4>Xóa Sản Phẩm </h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.Hidden("ProductID", Model.ProductID);
+
+
         <div class="form-group">
             @Html.LabelFor(model => model.ProductName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -40,6 +45,7 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ProductDescription, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ProductDescription, "", new { @class = "text-danger" })
+                @*<textarea> name= "ProductDescription" class="textarea">@Model.ProductDescription </textarea>*@
             </div>
         </div>
 
@@ -70,11 +76,12 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ShowImage, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input name="ShowImage" type="file" value="" class="form-control" />
-
+                <input name="ShowImage" type="file" />
                 @Html.EditorFor(model => model.ShowImage, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ShowImage, "", new { @class = "text-danger" })
                 <span style="color :red ;">@ViewBag.upload</span>
+                <br />
+                <img src=" @Url.Content("~/Content/HinhAnhSP/"+Model.ShowImage) " width="250" ;height="100" />
             </div>
         </div>
 
@@ -99,9 +106,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CreatedDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-
-                @Html.TextBox("CreatedDate", "", new { id = "datepicker" })
-                @Html.ValidationMessageFor(model => model.CreatedDate, "", new { @class = "text-danger" })
+                @if (Model.CreatedDate != null)
+                {
+                    @Html.TextBox("CreatedDate", Model.CreatedDate.Value.ToString("dd/MM/yyyy"), new { id = "datepicker", @class = "date" })
+                    @Html.ValidationMessageFor(model => model.CreatedDate, "", new { @class = "text-danger" })
+                }
             </div>
         </div>
 
@@ -121,13 +130,12 @@
             </div>
         </div>
 
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Xóa Sản Phẩm " class="btn btn-danger" />
             </div>
         </div>
-
-
     </div>
 }
 
@@ -135,15 +143,4 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 
-<style>
-    .form-group {
-        width: 900px;
-    }
 
-    .h2 {
-        text-align: center;
-        text-transform: uppercase;
-        font-family: 'Segoe UI';
-        font-size: 12px;
-    }
-</style>
